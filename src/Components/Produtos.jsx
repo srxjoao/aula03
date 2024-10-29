@@ -1,9 +1,9 @@
-import './style.css'
+import styles from '../style/produtos.module.css'
 export default function Produto({produtos}){
     return(
        <main>
       <h1>Lista de Produtos</h1>
-      <ul>
+      <ul className={styles.blocoProdutos}>
         {produtos.map(produto => (
           <li key={produto.id}>
             <h2>{produto.title}</h2>
