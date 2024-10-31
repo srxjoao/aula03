@@ -1,8 +1,26 @@
+*{
+    list-style: none;
+}
 .blocoProdutos{
-    display:flex;
+    flex-direction: row;
     flex-direction:row;
+    justify-content: space-around;
+    flex-flow: column wrap;
     justify-content:center;
-    flex-wrap:wrap;
     color:blue;
     font-size:20px;
+}
+
+h1{
+    align-items: center;
+    color: rgb(66, 58, 74);
+}
+
+h2{
+    align-items: center;
+    color: rgb(5, 41, 29);
+}
+
+img{
+    width: 80px;
 }
