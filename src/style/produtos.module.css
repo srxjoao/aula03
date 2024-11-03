@@ -2,13 +2,7 @@
     list-style: none;
 }
 .blocoProdutos{
-    flex-direction: row;
-    flex-direction:row;
-    justify-content: space-around;
-    flex-flow: column wrap;
-    justify-content:center;
-    color:blue;
-    font-size:20px;
+    display: flex;
 }
 
 h1{
@@ -19,6 +13,7 @@ h1{
 h2{
     align-items: center;
     color: rgb(5, 41, 29);
+    font-size: 80%;
 }
 
 img{
