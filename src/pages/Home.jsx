@@ -9,11 +9,13 @@ export default function Home() {
         const info = await produtosInfo.json();
             setProduto(info);
             }catch{
-                alert("Oii deu")
+                alert("Oii não  deu certo :)")
             }
         }
         buscar();
-    },[])
+    },[]);
+
+   
     return(
         <>
         <Produto produtos={produto}/>

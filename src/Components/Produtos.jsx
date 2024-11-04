@@ -1,5 +1,11 @@
 import styles from '../style/produtos.module.css'
-export default function Produto({produtos}){
+import Loading from './Loading'
+export default function Produto({produtos})
+
+{ 
+  if(produtos.length === 0){
+    return <div><Loading/></div>
+  }
     return(
        <main>
       <h1>Lista de Produtos</h1>
@@ -8,8 +14,8 @@ export default function Produto({produtos}){
           <li key={produto.id}>
             <h2>{produto.title}</h2>
             <p>{produto.description}</p>
-            <p>Preço: ${produto.price}</p>
-            <img src={produto.image} alt={produto.title} width={100} />
+            <center><img src={produto.image} alt={produto.title} width={100} /></center>
+            <center>Preço: ${produto.price}</center>
           </li>
         ))}
       </ul>
