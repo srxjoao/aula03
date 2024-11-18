@@ -10,10 +10,11 @@ body{
     padding: 0;
 }
 
-/*Código aprendido no flexbox flogy,gap aprendemos em laec 2*/.blocoProdutos {
+.blocoProdutos {
     display: flex;
     flex-wrap: wrap;
-    gap: 2px;
+    gap: 20px;
+    border-radius: 15px;
     justify-content: space-between;
     background-color: #3A7CA5;
 }
@@ -21,6 +22,7 @@ body{
 .blocoProdutos > * {
     flex: 1 1 calc(33.333% - 20px); /*Metódo aprendido no video da rafa balerini*/
     box-sizing: border-box; /*Metódo aprendido no video da rafa balerini*/
+
 }
 
 h1{

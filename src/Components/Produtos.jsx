@@ -8,7 +8,6 @@ export default function Produto({produtos})
   }
     return(
        <main>
-      <h1>Lista de Produtos</h1>
       <ul className={styles.blocoProdutos}>
         {produtos.map(produto => (
           <li key={produto.id}>
