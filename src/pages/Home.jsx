@@ -4,7 +4,7 @@ export default function Home() {
    // O estados de lista vai receber os dados, recebendo os dados da API e renderizando o map
    //event.target.value
     const [produto, setProduto] = useState([])
-    const [buscadados, Setbuscadados] = useState([])
+    const [buscaitens, SetBuscaItens] = useState([])
     useEffect(()=>{
         const buscar = async () =>{
             try{
@@ -40,16 +40,20 @@ export default function Home() {
         const listPrecoMaior = [...produto].reverse((a, b) => a.price - b.price);
         setProduto(listPrecoMaior);
       }
-    
-    
+
+      //Crie a Função e passei o set lista e o evento
+    const BuscaItens = (event) =>{
+        SetBuscaItens(event.target.value.produto);
+    }
     return(
         <>
-              <h1>Lista de Produtos</h1>
-              <div >
+        <h1>Lista de Produtos</h1>
+        <div>
         <button onClick={()=>ordemAZ()}>Listar de A a Z</button>
         <button onClick={()=>ordemZA()}>Listar de Z a A</button>
         <button onClick={()=> MenorPreco()}>Listar por Menor Preço</button>
         <button onClick={()=>MaiorPreco()}>Listar por Maior Preço</button>
+        <input type="text" placeholder="procura algo ae, pro jp ganhar nota" value={buscaitens} onClick={()=>BuscaItens}></input>
         </div >
         <Produto produtos={produto}/>
         
