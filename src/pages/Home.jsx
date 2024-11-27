@@ -42,8 +42,8 @@ export default function Home() {
       }
 
       //Crie a Função e passei o set lista e o evento
-    const BuscaItens = (event) =>{
-        SetBuscaItens(event.target.value.produto);
+    const BuscaItens = ()=>{
+        return 
     }
     return(
         <>
@@ -53,7 +53,7 @@ export default function Home() {
         <button onClick={()=>ordemZA()}>Listar de Z a A</button>
         <button onClick={()=> MenorPreco()}>Listar por Menor Preço</button>
         <button onClick={()=>MaiorPreco()}>Listar por Maior Preço</button>
-        <input type="text" placeholder="procura algo ae, pro jp ganhar nota" value={buscaitens} onClick={()=>BuscaItens}></input>
+        <input type="text" placeholder="procura algo ae, pro jp ganhar nota" value={buscaitens} onChange={BuscaItens}></input>
         </div >
         <Produto produtos={produto}/>
         
